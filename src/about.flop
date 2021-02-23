@@ -1,0 +1,17 @@
+---
+layout: default
+title: About Me
+path: about.wave
+---
+<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
+  <h1>
+    Hello
+    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+      {{title}}
+    </strong>
+  </h1>
+
+  <p>
+    {{settings.aboutme}}
+  </p>
+</div>
