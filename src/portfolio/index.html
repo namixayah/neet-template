@@ -4,7 +4,7 @@ layout: portfolio
 
 
 <section class="mt-15">
-    {% set postslist = collections.projects %}
+    {% set postslist = collections.portfolio %}
 
     {% for post in postslist | reverse %}
         <article class="my-8">
@@ -33,7 +33,7 @@ layout: portfolio
 
             <p>
                 <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                    Read more →
+                    View Projects →
                 </a>
             </p>
 
