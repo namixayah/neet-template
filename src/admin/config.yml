@@ -26,7 +26,6 @@ collections:
       - { label: "Date Taken", name: "datetaken", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "thumbnail", widget: "image"}
-        options: ["Feature", "News", "Portrait", "Other"]
   - label: "Blog"
     name: "blog"
     folder: "src/posts"
