@@ -1,24 +1,23 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--=============== basic  ===============-->
-        <meta charset="UTF-8">
-        <title>{{title}}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
-        <meta name="description" content="{{description}}"/>
-        <!--=============== css  ===============-->	
-        <link type="text/css" rel="stylesheet" href="/static/css/reset.css">
-        <link type="text/css" rel="stylesheet" href="/static/css/plugins.css">
-        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
-        <link type="text/css" rel="stylesheet" href="/static/css/dark-style.css"> 
-        <link type="text/css" rel="stylesheet" href="/static/css/yourstyle.css">
-        <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="/static/images/favicon.ico">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {{title}}
+    </title>
+    {% if description %}
+      <meta name="description" content="{{description}}"/>
+    {% endif %}
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    {% if prism == true %}
+      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+    {% endif %}
+  </head>
   <body>
-    {% include "./partials/header.html" %}
+    {% include "./partials/navbar.html" %}
 
     {{ content | safe }}
 
@@ -31,11 +30,6 @@
       <!-- Needed only if you are using Netlify Identity feature -->
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
-  </div>
-  <!-- Main end -->
-  <!--=============== scripts  ===============-->
-  <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/static/js/plugins.js"></script>
-  <script type="text/javascript" src="/static/js/scripts.js"></script>
-</body>
+
+  </body>
 </html>

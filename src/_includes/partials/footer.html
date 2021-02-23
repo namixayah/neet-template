@@ -1,81 +1,9 @@
-                    <!--=============== content-footer   ===============-->
-                    <div class="height-emulator"></div>
-                    <footer class="content-footer">
-                        <div class="footer-inner">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <a class="footer-logo" href="index.html"><img src="images/logo.png" alt=""></a>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="footer-header fl-wrap"><span>01.</span> Contacts</div>
-                                    <div class="footer-box fl-wrap">
-                                        <ul>
-                                            <li><span>Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
-                                            <li> <span>Adress :</span><a href="#" target="_blank">USA 27TH Brooklyn NY</a></li>
-                                            <li><span>Phone :</span><a href="#">+7(111)123456789</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="footer-header fl-wrap"><span>02.</span> Subscribe</div>
-                                    <div class="footer-box fl-wrap">
-                                        <div class="subcribe-form fl-wrap">
-                                            <span>Newsletter</span>
-                                            <form id="subscribe">
-                                                <input class="enteremail" name="email" id="subscribe-email" placeholder="email" spellcheck="false" type="text">
-                                                <button type="submit" id="subscribe-button" class="subscribe-button">Submit</button>
-                                                <label for="subscribe-email" class="subscribe-message"></label>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-9">
-                                    <div class="fl-wrap policy-box">
-                                        <p> &#169; Balkon   2017.  All rights reserved.  </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="to-top"><i class="fa fa-long-arrow-up"></i></div>
-                        </div>
-                    </footer>
-                    <!-- content-footer end    -->
-                </div>
-                <!-- content-holder end -->
-            </div>
-            <!-- wrapper end -->
-            <!--search-form-holder -->  
-            <div class="search-form-holder fixed-search">
-                <div class="search-form-bg"></div>
-                <div class="search-form-wrap">
-                    <div class="container">
-                        <form class="searchform" method="get"  >
-                            <input type="text" autocomplete="off"   name="s" placeholder="Type and Enter to Search">
-                        </form>
-                        <div class="close-fixed-search"></div>
-                    </div>
-                    <div class="dublicated-text"></div>
-                </div>
-            </div>
-            <!--search-form-holder  end-->  
-            <!-- Share container  -->
-            <div class="share-wrapper isShare">
-                <div class="share-container"></div>
-            </div>
-            <!-- Share container  end-->            
-            <!-- footer -->
-            <footer class="main-footer">
-                <div class="fixed-title"><span>Home Slider</span></div>
-                <div class="footer-social">
-                    <ul>
-                        <li><a href="#" target="_blank" ><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" target="_blank" ><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#" target="_blank" ><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#" target="_blank" ><i class="fa fa-tumblr"></i></a></li>
-                    </ul>
-                </div>
-            </footer>
-            <!-- footer end-->
+<footer class="{{ 'fixed' if path == 'home' }} bottom-0 text-center w-full py-4">
+    <small class="text-gray-500">Copyright ©
+        {{settings.name}}
+        2020. Made with ❤ by
+        <a href="{{settings.url}}" target="_blank" class="underline">{{settings.author}}</a>
+        •
+        <a href="https://github.com/surjithctly/neat-starter" class="underline" target="_blank" rel="noopener">View on Github</a>
+    </small>
+</footer>
