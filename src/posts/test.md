@@ -8,14 +8,4 @@ tags:
 ---
 test
 
-test
-
-test
-
-test
-
-test
-
-* test
-* test
-* test
+![](/static/img/pxl_20201202_234746318.portrait.jpg)
