@@ -55,7 +55,6 @@ collections:
           - label: Nav Items
             name: items
             widget: list
-            allow_add: true
             collapsed: false
             fields:
               - { label: Title, name: text, widget: string }
