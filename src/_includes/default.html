@@ -17,7 +17,6 @@
     {% endif %}
   </head>
   <body>
-    <div id="particles-js"></div>
     {% include "./partials/navbar.html" %}
 
     {{ content | safe }}
@@ -31,6 +30,5 @@
       <!-- Needed only if you are using Netlify Identity feature -->
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
-    <script src="/static/js/particles.js"></script>
   </body>
 </html>
