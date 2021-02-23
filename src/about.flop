@@ -7,7 +7,7 @@ path: about.wave
   <h1>
     Hello
     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-      {{title}}
+      {{settings.author}}
     </strong>
   </h1>
 
