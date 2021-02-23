@@ -19,6 +19,8 @@ collections:
     editor:
       preview: false
     fields:
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      options: ["Feature", "News", "Portrait", "Other"]
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
