@@ -1,10 +1,9 @@
----
 items:
   - text: Home
-    url: "/"
+    url: /
   - text: Portfolio
-    url: "/portfolio"
+    url: /portfolio
   - text: Blog
-    url: "/blog"
+    url: /blog
   - text: About
-    url: "/about-me"
+    url: /about
