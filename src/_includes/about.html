@@ -1,0 +1,17 @@
+---
+title: About Me
+layout: default
+---
+
+<div class="container max-w-3xl mt-6 px-6">
+
+    <h1>
+        Hello my name is
+        <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+          {{settings.author}}
+        </strong>
+      </h1>
+
+    {{ content | safe }}
+
+</div>
