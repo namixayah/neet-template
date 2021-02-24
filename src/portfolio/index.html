@@ -24,6 +24,11 @@ layout: portfolio
 
                 </time>
             </p>
+            {% if post.data.thumbnail %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ post.data.thumbnail }}
+                </p>
+            {% endif %}
             {% if post.data.description %}
                 <p class="text-lg text-gray-500 mb-3">
                     {{ post.data.description }}
