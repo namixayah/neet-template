@@ -42,7 +42,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["Feature", "News", "Review", "Personal", "Site Updates"]
   - label: "Settings"
     name: "settings"
     editor:
