@@ -19,8 +19,8 @@ collections:
     editor:
       preview: false
     fields:
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Date Taken", name: "datetaken", widget: "datetime" }
@@ -32,9 +32,9 @@ collections:
     editor:
       preview: false
     fields:
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - widget: select
@@ -42,7 +42,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Feature", "News", "Review", "Personal", "Site Updates"]
+        options: ["Feature", "News", "Review", "Personal", "Site Updates", "Legal"]
   - label: "Settings"
     name: "settings"
     editor:
@@ -79,3 +79,4 @@ collections:
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
           - { label: "About Me", name: "aboutme", widget: "markdown" }
+          - { label: Current Version, name: Version, widget: string }

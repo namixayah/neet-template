@@ -8,3 +8,5 @@ _site/
 package-lock.json
 .env
 server.js
+# Local Netlify folder
+.netlify
