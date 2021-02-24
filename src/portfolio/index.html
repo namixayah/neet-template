@@ -26,7 +26,7 @@ layout: portfolio
             </p>
             {% if post.data.thumbnail %}
                 <p class="text-lg text-gray-500 mb-3">
-                    {{ post.data.thumbnail }}
+                    <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
                 </p>
             {% endif %}
             {% if post.data.description %}
