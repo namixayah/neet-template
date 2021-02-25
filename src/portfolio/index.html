@@ -13,7 +13,9 @@ layout: portfolio
         </p>
         {% if post.data.thumbnail %}
         <p class="text-lg text-gray-500 mb-3">
-            <a href="#" onclick="toggleModal('modal-id')"><img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none"></a>
+          <button type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
+            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none">
+          </button>
         </p>
         {% endif %}
           <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
