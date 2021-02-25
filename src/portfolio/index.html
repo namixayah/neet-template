@@ -5,15 +5,15 @@ layout: portfolio
 
 <section class="mt-15">
     {% set postslist = collections.projects %}
-    <div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-4">
+    <div class="grid grid-flow-col grid-rows-2 grid-cols-2 gap-4">
     {% for post in postslist | reverse %}
-    <div class="shadow rounded max-w-full h-auto align-middle border-none">
+    <div class="rounded max-w-full h-auto align-middle border-none">
     <article class="my-8">
         <p class="text-base leading-6 text-gray-500 mb-3">
         </p>
         {% if post.data.thumbnail %}
         <p class="text-lg text-gray-500 mb-3">
-            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-half h-auto align-middle border-none">
+            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none">
         </p>
         {% endif %}
         <button class="w-full flex items-center justify-center rounded-md bg-teal-500 text-black" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
