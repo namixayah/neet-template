@@ -13,45 +13,11 @@ layout: portfolio
         </p>
         {% if post.data.thumbnail %}
         <p class="text-lg text-gray-500 mb-3">
-          <button type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
-            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none">
+          <button type="button" style="transition: all .15s ease">
+            <a href="{{ post.url | url }}"><img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none"></a>
           </button>
         </p>
         {% endif %}
-          <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
-            <div class="relative w-auto my-6 mx-auto max-w-3xl">
-              <!--content-->
-              <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                <!--header-->
-                <div class="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-                    <p class="my-4 text-gray-600 text-lg leading-relaxed">
-                        {% if post.data.title %}
-                        {{ post.data.title }}
-                        {% else %}
-                        Untitled
-                        {% endif %}
-                      </p>
-                </div>
-                <!--body-->
-                <div class="relative p-6 flex-auto">
-                  <p class="my-4 text-gray-600 text-lg leading-relaxed">
-                    {% if post.data.description %}
-                    <p class="text-lg text-gray-500 mb-3">
-                        {{ post.data.description }}
-                    </p>
-                    {% endif %}
-                  </p>
-                </div>
-                <!--footer-->
-                <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
-                  <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
     </article>
     </div>
     {% endfor %}
