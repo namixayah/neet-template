@@ -78,4 +78,4 @@ collections:
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
           - { label: "About Me", name: "aboutme", widget: "markdown" }
-          - { label: Current Version, name: version, widget: string }
+          - { label: Current Version, name: currentversion, widget: string }
