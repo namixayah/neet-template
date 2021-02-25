@@ -5,7 +5,7 @@ layout: portfolio
 
 <section class="mt-15">
     {% set postslist = collections.projects %}
-    <div class="grid grid-flow-col grid-rows-2 grid-cols-4 gap-0">
+    <div class="grid grid-flow-col grid-rows-2 grid-cols-2 gap-2">
     {% for post in postslist | reverse %}
     <div class="rounded max-w-full h-auto align-middle border-none">
     <article class="my-8">
@@ -13,12 +13,9 @@ layout: portfolio
         </p>
         {% if post.data.thumbnail %}
         <p class="text-lg text-gray-500 mb-3">
-            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none">
+            <a href="#" onclick="toggleModal('modal-id')"><img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none"></a>
         </p>
         {% endif %}
-        <button class="w-full flex items-center justify-center rounded-md bg-teal-500 text-black" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
-            View Project Information
-          </button>
           <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
             <div class="relative w-auto my-6 mx-auto max-w-3xl">
               <!--content-->
