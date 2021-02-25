@@ -18,11 +18,6 @@ layout: portfolio
                 </a>
             </h2>
             <p class="text-base leading-6 text-gray-500 mb-3">
-                <time>
-                    {{ post.date | readableDate }}
-                    
-
-                </time>
             </p>
             {% if post.data.thumbnail %}
                 <p class="text-lg text-gray-500 mb-3">
@@ -36,8 +31,8 @@ layout: portfolio
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                    View Projects →
+                <a href="{{ post.url | url }}" class="w-full flex items-center justify-center rounded-md bg-teal-500 text-black">
+                    View Project →
                 </a>
             </p>
 
