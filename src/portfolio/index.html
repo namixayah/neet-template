@@ -5,23 +5,15 @@ layout: portfolio
 
 <section class="mt-15">
     {% set postslist = collections.projects %}
-
+    <div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-4">
     {% for post in postslist | reverse %}
+    <div class="shadow rounded max-w-full h-auto align-middle border-none">
     <article class="my-8">
-        <h2 class="font-bold text-3xl text-gray-900 mb-2">
-            <a href="{{ post.url | url }}">
-                {% if post.data.title %}
-                {{ post.data.title }}
-                {% else %}
-                Untitled
-                {% endif %}
-            </a>
-        </h2>
         <p class="text-base leading-6 text-gray-500 mb-3">
         </p>
         {% if post.data.thumbnail %}
         <p class="text-lg text-gray-500 mb-3">
-            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-full h-auto align-middle border-none">
+            <img src="{{settings.url}}{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="shadow rounded max-w-half h-auto align-middle border-none">
         </p>
         {% endif %}
         <button class="w-full flex items-center justify-center rounded-md bg-teal-500 text-black" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
@@ -34,7 +26,11 @@ layout: portfolio
                 <!--header-->
                 <div class="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
                     <p class="my-4 text-gray-600 text-lg leading-relaxed">
-                        Project Information
+                        {% if post.data.title %}
+                        {{ post.data.title }}
+                        {% else %}
+                        Untitled
+                        {% endif %}
                       </p>
                 </div>
                 <!--body-->
@@ -58,5 +54,7 @@ layout: portfolio
           </div>
           <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
     </article>
+    </div>
     {% endfor %}
+    </div>
 </section>
